@@ -145,15 +145,18 @@ img {
 
 /* Hero */
 
-.main-title-container {
-  /* width: 696px; */
-  padding-right: 250px;
-  padding-top: 200px;
-  margin-bottom: 30px;
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.modal-button-container {
-  padding-left: 350px;
+.hero {
+  background-color: var(--hero-color);
+  padding-top: 200px;
+  padding-bottom: 210px;
+  height: 600px;
+  width: 1600px;
 }
 
 .modal-btn {
@@ -173,11 +176,7 @@ img {
 .modal-btn:focus {
   background-color: var(--modal-button-color);
 }
-.hero {
-  background-color: var(--hero-color);
-  height: 600px;
-  width: 1600px;
-}
+
 .main-title {
   font-weight: 900;
   font-size: 44px;
@@ -185,15 +184,26 @@ img {
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--background-colors);
+  margin-bottom: 40px;
 }
 
 /* Description */
 .description {
   padding-top: 94px;
+  padding-bottom: 94px;
+}
+.description-list {
+  flex-wrap: nowrap;
+  text-align: left;
 }
 
 .description-list-item {
-  flex-basis: calc((100% -120) / 4);
+  flex-basis: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.description-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .description-title {
@@ -213,6 +223,9 @@ img {
 }
 
 /* What we do section */
+.what-we-do {
+  padding-top: 0;
+}
 .what-we-do-title {
   font-weight: 700;
   font-size: 36px;
@@ -220,7 +233,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--nav-list-link-color);
   margin-bottom: 50px;
-  padding-left: 400px;
+  text-align: center;
 }
 
 .what-we-do-cards {
@@ -259,8 +272,8 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  text-align: center;
   padding-top: 30px;
-  padding-left: 60px;
   padding-bottom: 30px;
 }
 /* FOOTER */
@@ -269,6 +282,7 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 .address {
   font-style: normal;
   font-weight: 400;
@@ -276,20 +290,28 @@ img {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--background-colors);
+  margin-top: 20px;
 }
 .phone-email-link {
+  display: inline-block;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  margin-top: 9px;
   margin-bottom: 9px;
 }
 
 /* PORTFOLIO */
 /* Portfolio buttons */
+.buttons-of-portfolio {
+  padding-top: 100px;
+  padding-bottom: 56px;
+}
 .button-portfolio {
+  min-width: 73px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -308,8 +330,6 @@ img {
 
 .button-list {
   list-style: none;
-  padding-top: 100px;
-  padding-bottom: 56px;
   display: flex;
   justify-content: center;
 }
